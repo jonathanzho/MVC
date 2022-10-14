@@ -1,11 +1,11 @@
 package com.example.mvc
 
-import java.lang.IndexOutOfBoundsException
 import java.util.*
+import kotlin.collections.ArrayList
 
 class Model : Observable() {
     // declaring a list of integer
-    private val List: MutableList<Int>
+    val List: MutableList<Int>
 
     // constructor to initialize the list
     init {
