@@ -40,6 +40,12 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
         Button3?.setOnClickListener(this)
     }
 
+    override fun onResume() {
+        super.onResume()
+
+        myModel?.let { update(it, null) }
+    }
+
     // calling setValueAtIndex() method
     // by passing appropriate arguments
     // for different buttons

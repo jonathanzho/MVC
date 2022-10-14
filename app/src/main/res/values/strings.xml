@@ -1,6 +1,5 @@
 <resources>
-  <string name="app_name">GfG | MVC Architecture</string>
-  <string name="Heading">MVC Architecture Pattern</string>
-  <string name="Text1">Button_1</string>
-  <string name="count">Count:0</string>
+  <string name="app_name">Demo | MVC Architecture</string>
+  <string name="heading">MVC Architecture Pattern</string>
+  <string name="count">Count: initial</string>
 </resources>
