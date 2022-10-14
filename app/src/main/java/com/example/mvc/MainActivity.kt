@@ -63,8 +63,8 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
 
         // changing text of the buttons
         // according to updated values
-        Button1!!.text = "Count: " + myModel!!.getValueAtIndex(0)
-        Button2!!.text = "Count: " + myModel!!.getValueAtIndex(1)
-        Button3!!.text = "Count: " + myModel!!.getValueAtIndex(2)
+        Button1!!.text = getString(R.string.count, myModel!!.getValueAtIndex(0))
+        Button2!!.text = getString(R.string.count, myModel!!.getValueAtIndex(1))
+        Button3!!.text = getString(R.string.count, myModel!!.getValueAtIndex(2))
     }
 }

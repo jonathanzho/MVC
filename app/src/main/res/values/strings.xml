@@ -1,5 +1,5 @@
 <resources>
   <string name="app_name">Demo | MVC Architecture</string>
   <string name="heading">MVC Architecture Pattern</string>
-  <string name="count">Count: initial</string>
+  <string name="count">Count: %1$d</string>
 </resources>
