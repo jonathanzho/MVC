@@ -9,12 +9,12 @@ import java.util.*
 class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
 
     // creating object of Model class
-    var myModel: Model? = null
+    var mModel: Model? = null
 
     // creating object of Button class
-    var Button1: Button? = null
-    var Button2: Button? = null
-    var Button3: Button? = null
+    var mButton1: Button? = null
+    var mButton2: Button? = null
+    var mButton3: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,27 +23,27 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
         // creating relationship between the
         // observable Model and the
         // observer Activity
-        myModel = Model()
-        myModel!!.addObserver(this)
+        mModel = Model()
+        mModel!!.addObserver(this)
 
         // assigning button IDs to the objects
-        Button1 = findViewById(R.id.button)
-        Button2 = findViewById(R.id.button2)
-        Button3 = findViewById(R.id.button3)
+        mButton1 = findViewById(R.id.button1)
+        mButton2 = findViewById(R.id.button2)
+        mButton3 = findViewById(R.id.button3)
 
 
         // transfer the control to Onclick() method
         // when a button is clicked by passing
         // argument "this"
-        Button1?.setOnClickListener(this)
-        Button2?.setOnClickListener(this)
-        Button3?.setOnClickListener(this)
+        mButton1?.setOnClickListener(this)
+        mButton2?.setOnClickListener(this)
+        mButton3?.setOnClickListener(this)
     }
 
     override fun onResume() {
         super.onResume()
 
-        myModel?.let { update(it, null) }
+        mModel?.let { update(it, null) }
     }
 
     // calling setValueAtIndex() method
@@ -51,9 +51,9 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
     // for different buttons
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.button -> myModel?.setValueAtIndex(0)
-            R.id.button2 -> myModel?.setValueAtIndex(1)
-            R.id.button3 -> myModel?.setValueAtIndex(2)
+            R.id.button1 -> mModel?.setValueAtIndex(0)
+            R.id.button2 -> mModel?.setValueAtIndex(1)
+            R.id.button3 -> mModel?.setValueAtIndex(2)
         }
     }
 
@@ -63,8 +63,8 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
 
         // changing text of the buttons
         // according to updated values
-        Button1!!.text = getString(R.string.count, myModel!!.getValueAtIndex(0))
-        Button2!!.text = getString(R.string.count, myModel!!.getValueAtIndex(1))
-        Button3!!.text = getString(R.string.count, myModel!!.getValueAtIndex(2))
+        mButton1!!.text = getString(R.string.count, mModel!!.getValueAtIndex(0))
+        mButton2!!.text = getString(R.string.count, mModel!!.getValueAtIndex(1))
+        mButton3!!.text = getString(R.string.count, mModel!!.getValueAtIndex(2))
     }
 }
