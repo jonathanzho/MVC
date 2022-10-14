@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
         // creating relationship between the
         // observable Model and the
         // observer Activity
-        mModel = Model()
+        mModel = Model(3)
         mModel!!.addObserver(this)
 
         // assigning button IDs to the objects
@@ -51,9 +51,9 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
     // for different buttons
     override fun onClick(v: View) {
         when (v.id) {
-            R.id.button1 -> mModel?.setValueAtIndex(0)
-            R.id.button2 -> mModel?.setValueAtIndex(1)
-            R.id.button3 -> mModel?.setValueAtIndex(2)
+            R.id.button1 -> mModel?.incrementValueAtIndex(0)
+            R.id.button2 -> mModel?.incrementValueAtIndex(1)
+            R.id.button3 -> mModel?.incrementValueAtIndex(2)
         }
     }
 
