@@ -7,14 +7,11 @@ import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
+    private var mModel: Model? = null
 
-    // creating object of Model class
-    var mModel: Model? = null
-
-    // creating object of Button class
-    var mButton1: Button? = null
-    var mButton2: Button? = null
-    var mButton3: Button? = null
+    private var mButton1: Button? = null
+    private var mButton2: Button? = null
+    private var mButton3: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,7 +27,6 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
         mButton1 = findViewById(R.id.button1)
         mButton2 = findViewById(R.id.button2)
         mButton3 = findViewById(R.id.button3)
-
 
         // transfer the control to Onclick() method
         // when a button is clicked by passing
@@ -60,7 +56,6 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
     // function to update the view after
     // the values are modified by the model
     override fun update(arg0: Observable, arg1: Any?) {
-
         // changing text of the buttons
         // according to updated values
         mButton1!!.text = getString(R.string.count, mModel!!.getValueAtIndex(0))

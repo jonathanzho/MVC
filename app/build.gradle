@@ -2,10 +2,11 @@ apply plugin: 'com.android.application'
 
 // Kotlin:
 apply plugin: 'kotlin-android'
+apply plugin: 'org.jetbrains.kotlin.android'
 
 android {
     namespace 'com.example.mvc'
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.example.mvc"
