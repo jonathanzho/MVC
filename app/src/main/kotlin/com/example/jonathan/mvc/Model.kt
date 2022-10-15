@@ -1,4 +1,4 @@
-package com.example.mvc
+package com.example.jonathan.mvc
 
 import java.util.*
 import kotlin.collections.ArrayList

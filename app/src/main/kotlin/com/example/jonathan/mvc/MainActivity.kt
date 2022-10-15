@@ -1,9 +1,10 @@
-package com.example.mvc
+package com.example.jonathan.mvc
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.example.mvc.R
 import java.util.*
 
 class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
