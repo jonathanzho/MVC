@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.mvc.R
+import com.example.jonathan.mvc.R
 import java.util.*
 
 class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity(), Observer, View.OnClickListener {
 
     // function to update the view after
     // the values are modified by the model
+    @Deprecated("Deprecated in Java")
     override fun update(arg0: Observable, arg1: Any?) {
         // changing text of the buttons
         // according to updated values
